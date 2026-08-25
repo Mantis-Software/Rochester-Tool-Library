@@ -1,0 +1,15 @@
+.why-we-charge-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+}
+
+.why-we-charge-text
+{
+    font-size: 20px;
+    text-align: center;
+}

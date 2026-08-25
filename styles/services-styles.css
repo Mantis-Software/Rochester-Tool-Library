@@ -1,0 +1,105 @@
+.services-we-offer-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+
+.services-we-offer-item-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    width: 250px;
+    height: 650px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.services-we-offer-item-box-title
+{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.services-we-offer-item-box-printer
+{
+    width: 200px;
+    height: 200px;
+}
+
+.services-we-offer-item-box-truck
+{
+    width: 250px;
+}
+
+.service-classification-standard
+{
+    background-color: #15586f;
+    padding:10px;
+    border-radius: 16px;
+    color:white;   
+}
+
+.service-classification-premium
+{
+    background-color: #bfa311;
+    padding:10px;
+    border-radius: 16px;
+    color:white;   
+}
+
+hr
+{
+    width: 100%;
+}
+
+.services-we-offer-text
+{
+    width: 100%;
+    text-align: left;
+}
+
+.services-we-offer-sub-text
+{
+    text-align: left;
+    width: 100%;
+    font-size: 15px;
+}
+
+@media (max-width: 500px)
+{
+    .services-we-offer-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+
+    .services-we-offer-item-box
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 30px;
+
+        width: 250px;
+        height: 650px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        margin-top: 30px;
+    }
+
+}

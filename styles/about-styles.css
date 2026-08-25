@@ -1,0 +1,123 @@
+.about-organization-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    width: 90%;
+}
+
+.about-founder-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.about-text
+{
+    width: 500px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    font-size: 16px;
+}
+
+.creative-catalog-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.creative-catalog-image-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.creative-catalog-image-box-text
+{
+    font-size: 16px;
+    padding: 20px;
+}
+
+@media (max-width: 500px)
+{
+    .about-organization-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        width: 90%;
+    }
+
+    .about-founder-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .about-organization-image
+    {
+        width: 300px;
+    }
+
+    .about-text
+    {
+        width: 300px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        font-size: 20px;
+    }
+
+    .creative-catalog-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .creative-catalog-image-box
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+        margin-top: 30px;
+
+        width: 300px;
+        height: 400px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .creative-catalog-image-box-text
+    {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
