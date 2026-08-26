@@ -44,16 +44,18 @@ var PRODUCT_DETAIL_PAGE_HTML = `
             </div>
 
             <div class="product-page-check-out-form-section">
-                <label class="product-page-check-out-form-section-label">Full Name</label><br>
-                <input type="text" class="product-page-check-out-form-section-input"><br><br><br>
+                <p class="checkout-form-title">Checkout Request Form</p>
+                <p>* Required</p><br>
+                <label class="product-page-check-out-form-section-label">Full Name *</label><br>
+                <input id="customer_name" type="text" class="product-page-check-out-form-section-input"><br><br><br>
                 <label class="product-page-check-out-form-section-label">Membership ID (If Applicable)</label><br>
-                <input type="text" class="product-page-check-out-form-section-input"><br><br><br>
-                <label class="product-page-check-out-form-section-label">Email</label><br>
-                <input type="email" class="product-page-check-out-form-section-input"><br><br><br>
-                <label class="product-page-check-out-form-section-label">Desired Checkout Date</label><br>
-                <input type="date" class="product-page-check-out-form-section-input"><br>
+                <input id="customer_membership_id" type="text" class="product-page-check-out-form-section-input"><br><br><br>
+                <label class="product-page-check-out-form-section-label">Email *</label><br>
+                <input id="customer_email" type="email" class="product-page-check-out-form-section-input"><br><br><br>
+                <label class="product-page-check-out-form-section-label">Desired Checkout Date *</label><br>
+                <input id="customer_desired_checkout_date" type="date" class="product-page-check-out-form-section-input"><br>
                 <br><br><br><br>
-                <a class="product-page-check-out-form-section-check-out-request-button">Send Checkout Request</a>
+                <a class="product-page-check-out-form-section-check-out-request-button" onclick="send_check_out_request()">Send Checkout Request</a>
             </div>
         </div>
     </div>
@@ -226,4 +228,116 @@ function next_page()
         current_page += 1
         populate_products();
     }
+}
+
+// Send data to email code
+var sendMessageEndPoint = "https://www.api-contact-lite.com/sendMessage";
+
+var ERROR_FLAG = "ERROR";
+
+function endpointCall(endpoint=null, params={}, callBack=null)
+{
+    let endpointLink = identifyEndPoint(endpoint);
+    const Http = new XMLHttpRequest();
+    var params = JSON.stringify(params);
+    Http.open( "POST", endpointLink );
+    Http.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    Http.send(params);
+    Http.onreadystatechange = ( e ) => 
+    {
+        //If the request was successful then populate everything
+        if (Http.readyState == 4 && Http.status == 200) 
+        {
+            //parse the response from power automate to make it readable for the functions
+            callBack(JSON.parse( Http.responseText ));
+            
+        }else
+        {
+            callBack(ERROR_FLAG);
+        }
+    }
+}
+
+function identifyEndPoint(endpoint=null)
+{
+    switch(endpoint)
+    {
+        case "sendMessage":
+            return sendMessageEndPoint;
+    }
+}
+
+
+function formatMessage()
+{
+    let customer_name = document.getElementById('customer_name').value;
+    let customer_membership_id = document.getElementById('customer_membership_id').value;
+    let customer_email = document.getElementById('customer_email').value;
+    let customer_desired_checkout_date = document.getElementById('customer_desired_checkout_date').value;
+    let item_requested = document.getElementById('product_name').innerHTML;
+
+    let message = `CUSTOMER NAME : ${customer_name},  CUSTOMER_MEMBERSHIP_ID: ${customer_membership_id}, CUSTOMER_EMAIL:${customer_email}, DESIRED_CHECKOUT_DATE: ${customer_desired_checkout_date}, ITEM_REQUESTED: ${item_requested}`;
+    return message;
+}
+
+function checkRequiredFields()
+{
+    let customer_name = document.getElementById('customer_name').value;
+    let customer_email = document.getElementById('customer_email').value;
+    let customer_desired_checkout_date = document.getElementById('customer_desired_checkout_date').value;
+
+    if(customer_name && customer_email && customer_desired_checkout_date)
+    {
+        return true;
+    }else
+    {
+        alert("Please fill out all required fields with *");
+        return false;
+    }
+}
+
+function send_check_out_request()
+{
+    if(checkRequiredFields())
+    {
+        sendMessageOnClick();
+    }
+}
+
+
+function sendMessage(callBack = null)
+{
+
+    let message = formatMessage();
+
+    let params = {
+        "organization": "mantisSoftware",
+        "token": "c616bd12db4faa3a28b14cdf510311915b16d9c46117f194d496c0a0edead934",
+        "name" : "",
+        "companyName" : "Rochester Tool Library",
+        "email" : "",
+        "message": message
+    };
+    
+    endpointCall("sendMessage", params, function(data)
+    {
+        //Store id and name in cookies for later use
+        if(data["status"] == "success")
+        {
+            callBack('Successfully sent message!');
+            
+        }else if(data["status"] == "failed")
+        {
+            callBack("Failed to send message. Please try again!");
+        }
+    });
+}
+
+function sendMessageOnClick()
+{
+    sendMessage( function(responseMessage)
+        {
+            console.log('Message Sent');
+            alert("Request Sent! Expect a response from us soon.");
+        });
 }
