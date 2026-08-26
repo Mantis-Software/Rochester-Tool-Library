@@ -1,0 +1,157 @@
+.product-page-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.product-page-details-section
+{
+    padding-left: 50px;
+}
+
+.product-page-detail-title
+{
+    text-align: left;
+    width: 90%;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+
+.product-page-details-section-detail-title
+{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.product-page-details-section-detail-text
+{
+    font-size: 20px;
+}
+
+.product-page-details-section-detail-status-standard
+{
+    background-color: #15586f;
+    padding:10px;
+    border-radius: 16px;
+    color:white;
+    width: 70px;
+}
+
+.product-page-details-section-detail-status-premium
+{
+    background-color: #bfa311;
+    padding:10px;
+    border-radius: 16px;
+    color:white;   
+    width: 70px;
+}
+
+.product-page-back
+{
+    width: 90%;
+    text-align: left;
+}
+
+.product-page-check-out-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%; 
+}
+
+.product-page-check-out-details-section
+{
+    padding: 30px;
+    width: 50%;
+}
+
+.product-page-check-out-form-section
+{
+    padding: 30px;
+    width: 50%;
+}
+
+.product-page-check-out-form-section-label
+{
+    font-size: 20px;
+    font-weight: 300; 
+}
+
+.product-page-check-out-form-section-input
+{
+    width: 400px;
+    height:30px;
+}
+
+.product-page-check-out-form-section-check-out-request-button
+{
+    background-color: #15586f;
+    color: white;
+    width: 80px;
+    height: 40px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.product-page-check-out-details-section-title
+{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+@media (max-width: 500px)
+{
+
+    .product-page-container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-page-check-out-container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .product-page-image-section-display-image
+    {
+        width:300;
+        height: 400;
+    }
+
+    .product-page-details-section
+    {
+        padding-left: 0px;
+    }
+
+    .product-page-check-out-details-section
+    {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .product-page-check-out-form-section
+    {
+        padding: 0px;
+        width: 100%;
+
+    }
+
+    .product-page-check-out-form-section-input
+    {
+        width: 250px;
+        height:30px;
+    }
+}

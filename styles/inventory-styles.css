@@ -1,0 +1,98 @@
+.inventory-filter-categories-selector
+{
+    width: 200px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.inventory-filter-categories-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.inventory-grid-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inventory-grid-item-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    width: 250px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    margin-top: 30px;
+}
+
+.inventory-grid-item-box-image
+{
+    width: 250px;
+}
+
+.inventory-grid-item-box-title
+{
+    font-size: 20px;
+}
+
+.inventory-grid-item-box-available-button
+{
+    width: 150px;
+    background-color: #15586f;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.inventory-grid-item-box-unavailable-button
+{
+    width: 150px;
+    background-color: #424546;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    pointer-events: none;
+}
+
+.inventory-grid-item-box-status-standard
+{
+    background-color: #15586f;
+    padding:10px;
+    border-radius: 16px;
+    color:white;   
+}
+
+.inventory-grid-item-box-status-premium
+{
+    background-color: #bfa311;
+    padding:10px;
+    border-radius: 16px;
+    color:white;   
+}
+
+@media (max-width: 500px)
+{
+   .inventory-grid-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    } 
+}

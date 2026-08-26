@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Rochester Tool Library</title>
+    <link rel="icon" type="image/x-icon" href="./images/logos/logo_ico.ico">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="./styles/main-styles.css">
+    <link rel="stylesheet" href="./styles/utility-styles.css">
+    <link rel="stylesheet" href="./styles/inventory-styles.css">
+
+    <script src="scripts/products.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="./images/page_images/hero_image.webp">
+</head>
+
+
+<body onload="populate_products()">
+    
+
+    <!--Menu-->
+    <div>
+        <div class="menu-container">
+            <!--Image-->
+            <div>
+                <img src="./images/logos/word_logo.webp" class="menu-logo" alt="Rochester Tool Library Logo" loading="lazy" decoding="async"/>
+            </div>
+
+            <!--Options-->
+            <div class="menu-options-container">
+                <a href="./index.html">Home</a>
+                <a href="./index.html">About</a>
+                <a href="./index.html">Inventory</a>
+                <a href="./index.html">Services</a>
+                <a href="./index.html">Memberships</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="inventory-filter-categories-container">
+        <p>Categories: </p>
+        <br>
+        <select name="inventory-filter-categories" id="inventory-filter-categories" class="inventory-filter-categories-selector">
+            <option value="all">All</option>
+            <option value="tools">Tools</option>
+            <option value="technology">Technology</option>
+            <option value="arts_and_crafts">Arts & Crafts</option>
+        </select>
+    </div>
+
+    <div class="overall-container">
+        <p class="section-title">Inventory</p>
+        <div class="inventory-grid-container" id="inventory-grid-container">
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+</body>
+</html>
