@@ -85,6 +85,21 @@
     color:white;   
 }
 
+.inventory-page-navigator-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.inventory-page-navigator
+{
+    cursor: pointer;
+}
+
 @media (max-width: 500px)
 {
    .inventory-grid-container
@@ -95,4 +110,14 @@
         align-items: center;
         flex-wrap: wrap;
     } 
+
+    .inventory-page-navigator-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width:100%;
+    }
 }

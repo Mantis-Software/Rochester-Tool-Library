@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/main-styles.css">
     <link rel="stylesheet" href="./styles/utility-styles.css">
     <link rel="stylesheet" href="./styles/inventory-styles.css">
+    <link rel="stylesheet" href="./styles/product-styles.css">
 
     <script src="scripts/products.js"></script>
     <script src="scripts/scripts.js"></script>
@@ -41,24 +42,70 @@
         </div>
     </div>
 
-    <div class="inventory-filter-categories-container">
-        <p>Categories: </p>
-        <br>
-        <select name="inventory-filter-categories" id="inventory-filter-categories" class="inventory-filter-categories-selector">
-            <option value="all">All</option>
-            <option value="tools">Tools</option>
-            <option value="technology">Technology</option>
-            <option value="arts_and_crafts">Arts & Crafts</option>
-        </select>
-    </div>
-
-    <div class="overall-container">
-        <p class="section-title">Inventory</p>
-        <div class="inventory-grid-container" id="inventory-grid-container">
+    <div id="overall-product-container">
+        <div class="inventory-filter-categories-container">
+            <p>Categories: </p>
+            <br>
+            <select name="inventory-filter-categories" id="inventory-filter-categories" class="inventory-filter-categories-selector" onchange="update_products()">
+                <option value="all">All</option>
+                <option value="tools">Tools</option>
+                <option value="technology">Technology</option>
+                <option value="arts_and_crafts">Arts & Crafts</option>
+            </select>
         </div>
+
+        <div class="inventory-page-navigator-container">
+            <p class="inventory-page-navigator" onclick="previous_page()">Previous Page</p>
+            <p class="inventory-page-navigator" onclick="next_page()">Next Page</p>
+        </div>
+
+        <div class="overall-container">
+            <p class="section-title">Inventory</p>
+            <div class="inventory-grid-container" id="inventory-grid-container">
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="spacer"></div>
     </div>
 
-    <div class="spacer"></div>
+
+        <!--Footer-->
+    <footer>
+        <div class="footer-overall-container">
+            <div class="footer-container">
+                <div>
+                    <img src="./images/logos/no_word_logo.webp" class="footer-logo" alt="Rochester Tool Library Logo" loading="lazy" decoding="async" />
+                </div>
+
+                <div class="footer-links-container">
+                    <p class="footer-links-title">Links</p>
+                    <a href="./index.html" class="footer-links-text">Home</a>
+                    <a href="./index.html" class="footer-links-text">About</a>
+                    <a href="./index.html" class="footer-links-text">Inventory</a>
+                    <a href="./order.html" class="footer-links-text">Services</a>
+                    <a href="./order.html" class="footer-links-text">Memberships</a>
+                </div>
+
+                <div class="footer-hours-container">
+                    <p class="footer-hours-title">Hours</p>
+                    <p class="footer-links-text">Monday: 9am - 5pm</p>
+                    <p class="footer-links-text">Tuesday: 9am - 5pm</p>
+                    <p class="footer-links-text">Wednesday: 9am - 5pm</p>
+                    <p class="footer-links-text">Thursday: 9am - 5pm</p>
+                    <p class="footer-links-text">Friday: 9am - 5pm</p>
+                    <p class="footer-links-text">Saturday: 9am - 5pm</p>
+                    <p class="footer-links-text">Sunday: 9am - 5pm</p>
+                </div>
+
+                <div class="footer-contact-container">
+                    <p class="footer-links-title">Contact Us</p>
+                    <p class="footer-links-text">Email: tempEmail@gmail.com</p>
+                    <p class="footer-links-text">Phone Number : (832) 570-8833</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
