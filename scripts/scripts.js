@@ -39,7 +39,7 @@ var PRODUCT_DETAIL_PAGE_HTML = `
             <div class="product-page-check-out-details-section">
                 <p class="product-page-check-out-details-section-title">Check Out</p>
                 <p>Interested in checking out? Contact us directly or simply fill out the form and we will reach out within 1 hour during our operating time.</p>
-                <p>Email : tempEmail@gmail.com</p>
+                <p>Email : rochester.tool.library@gmail.com</p>
                 <p>Phone : (832) 570-8833</p>
             </div>
 
