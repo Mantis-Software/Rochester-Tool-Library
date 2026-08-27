@@ -178,6 +178,9 @@ function populate_product_detail_page(product_id)
     document.getElementById("product_available").innerHTML = product_available
     document.getElementById("product_deposit").innerHTML = DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_DEPOSIT")
     document.getElementById("check_out_without_membership").innerHTML = available_without_membership
+
+    window.scrollTo(0, 0);
+
 }
 
 function update_products()
