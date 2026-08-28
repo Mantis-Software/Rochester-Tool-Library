@@ -52,10 +52,10 @@ var PRODUCT_DETAIL_PAGE_HTML = `
                 <input id="customer_membership_id" type="text" class="product-page-check-out-form-section-input"><br><br><br>
                 <label class="product-page-check-out-form-section-label">Email *</label><br>
                 <input id="customer_email" type="email" class="product-page-check-out-form-section-input"><br><br><br>
-                <label class="product-page-check-out-form-section-label">Desired Checkout Date *</label><br>
+                <label class="product-page-check-out-form-section-label">Desired Check-out Date *</label><br>
                 <input id="customer_desired_checkout_date" type="date" class="product-page-check-out-form-section-input"><br>
                 <br><br><br><br>
-                <a class="product-page-check-out-form-section-check-out-request-button" onclick="send_check_out_request()">Send Checkout Request</a>
+                <a class="product-page-check-out-form-section-check-out-request-button" onclick="send_check_out_request()">Send Check-out Request</a>
             </div>
         </div>
     </div>
@@ -109,7 +109,7 @@ function create_product_item_boxes()
                 if(tmp_product_checkout_status)
                 {
                     tmp_button_css = "available-button"
-                    tmp_button_text = "Checkout"
+                    tmp_button_text = "Check-out"
                     tmp_button_onclick_function = "populate_product_detail_page('"+key+"')"
                 }else
                 {
@@ -148,7 +148,7 @@ function populate_product_detail_page(product_id)
     let product_available = "Not Available At This Time"
     if(DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_WITHOUT_MEMBERSHIP"))
     {
-        available_without_membership = "*Check out without membership is available."
+        available_without_membership = "*Check-out without membership is available."
     }
 
     if(DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_CHECKOUT_STATUS"))
