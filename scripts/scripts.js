@@ -5,7 +5,7 @@ var PRODUCT_DETAIL_PAGE_HTML = `
         <p class="product-page-detail-title">Product Details</p>
         <div class="product-page-container">
             <div class="product-page-image-section">
-                <img src="https://placehold.co/400x600" class="product-page-image-section-display-image" id="product_image">
+                <img src="" class="product-page-image-section-display-image" id="product_image" loading="lazy" decoding="async" width="400px">
             </div>
 
             <div class="product-page-details-section">
@@ -120,7 +120,7 @@ function create_product_item_boxes()
 
                 products_html += `     
                                     <div class="inventory-grid-item-box">
-                                        <img src="${tmp_product_image}" class="inventory-grid-item-box-image">
+                                        <img src="${tmp_product_image}" class="inventory-grid-item-box-image" alt="Photo of ${tmp_product_name}" loading="lazy" decoding="async">
                                         <p class="inventory-grid-item-box-title">${tmp_product_name}</p>
                                         <p class="inventory-grid-item-box-status-${tmp_product_membership_status.toLowerCase()}">${tmp_product_membership_status.toUpperCase()}</p>
                                         <a class="inventory-grid-item-box-${tmp_button_css}" onclick="${tmp_button_onclick_function}">${tmp_button_text}</a>
@@ -171,7 +171,8 @@ function populate_product_detail_page(product_id)
 
     
 
-    document.getElementById("product_image").innerHTML = DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_IMAGE")
+    document.getElementById("product_image").src = DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_IMAGE");
+    document.getElementById("product_image").alt = DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_NAME")
     document.getElementById("product_name").innerHTML = DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_NAME")
     document.getElementById("product_description").innerHTML = DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_DESCRIPTION")
     document.getElementById("product_membership_status").innerHTML = DISPLAYED_PRODUCTS.get(product_id).get("PRODUCT_MEMBERSHIP_STATUS").toUpperCase()
@@ -219,7 +220,7 @@ function previous_page()
     {
         current_page -= 1
         populate_products();
-
+        window.scrollTo(0, 0);
     }
 }
 
@@ -230,6 +231,7 @@ function next_page()
     {
         current_page += 1
         populate_products();
+        window.scrollTo(0, 0);
     }
 }
 
