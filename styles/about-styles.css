@@ -55,6 +55,12 @@
     padding: 20px;
 }
 
+.about-founder-image
+{
+    width: 300px;
+    height:300px;
+}
+
 @media (max-width: 500px)
 {
     .about-organization-container
@@ -78,6 +84,11 @@
     }
 
     .about-organization-image
+    {
+        width: 300px;
+    }
+
+    .about-founder-image
     {
         width: 300px;
     }

@@ -80,19 +80,19 @@
         <div class="highlights-container">
         
             <div class="highlighted-tools-item-box">
-                <img src="./images/tool_photos/milwaukee_drill_m18.webp" class="highlighted-tools-item-box-image">
+                <img src="./images/tool_photos/milwaukee_drill_m18.webp" class="highlighted-tools-item-box-image" loading="lazy" decoding="async" alt="m18 milwaukee drill">
                 <p class="highlighted-tools-item-box-title">Milwaukee Drill</p>
                 <a class="highlighted-tools-item-box-button" href="./inventory.html">View Inventory</a>
             </div>
 
             <div class="highlighted-tools-item-box">
-                <img src="./images/tool_photos/canon_r50_camera.webp" class="highlighted-tools-item-box-image">
+                <img src="./images/tool_photos/canon_r50_camera.webp" class="highlighted-tools-item-box-image" loading="lazy" decoding="async" alt="canon r50 camera">
                 <p class="highlighted-tools-item-box-title">Canon R50 Camera</p>
                 <a class="highlighted-tools-item-box-button" href="./inventory.html">View Inventory</a>
             </div>
 
             <div class="highlighted-tools-item-box">
-                <img src="./images/tool_photos/milwaukee_saw_m18.webp" class="highlighted-tools-item-box-image">
+                <img src="./images/tool_photos/milwaukee_saw_m18.webp" class="highlighted-tools-item-box-image" alt="milwauke m18 circular saw">
                 <p class="highlighted-tools-item-box-title">Milwaukee Circular Saw</p>
                 <a class="highlighted-tools-item-box-button" href="./inventory.html">View Inventory</a>
             </div>
@@ -105,7 +105,7 @@
         <p class="section-title">Why We Do What We Do</p>
         <div class="why-we-do-container">
             <div>
-                <img src="https://placehold.co/400x700" class="why-we-do-image">
+                <img src="./images/page_images/why_we_do_what_we_do.webp" class="why-we-do-image" loading="lazy" decoding="async" alt="showcasing a carpenter, painter, and electrical engineer">
             </div>
 
             <div class="why-we-do-text">
@@ -142,6 +142,40 @@
                 <br>
                 <br>
                 <a class="membership-item-box-membership-button" href="./memberships.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="overall-container">
+        <p class="section-title">Frequently Asked Questions</p>
+        <div class="faq-container">
+            <div class="faq-question-container" onclick="change_visibility_answer('answer1')">
+                <p>Q: How does the check-out process work?</p>
+                <p>⌄</p>
+            </div>
+
+            <div class="faq-answer-container" id="answer1">
+                <p>A: This is the answer to the question</p>
+            </div>
+            <br>
+            <div class="faq-question-container" onclick="change_visibility_answer('answer2')">
+                <p>Q: Do I need a membership to check-out products?</p>
+                <p>⌄</p>
+            </div>
+
+            <div class="faq-answer-container" id="answer2">
+                <p>A: This is the answer to the question</p>
+            </div>
+            <br>
+            <div class="faq-question-container" onclick="change_visibility_answer('answer3')">
+                <p>Q: Why does my check-out require a depost?</p>
+                <p>⌄</p>
+            </div>
+            <br>
+            <div class="faq-answer-container" id="answer3">
+                <p>A: This is the answer to the question</p>
             </div>
         </div>
     </div>
@@ -187,4 +221,5 @@
     </footer>
 
 </body>
+<script src="./scripts/utils.js"></script>
 </html>
