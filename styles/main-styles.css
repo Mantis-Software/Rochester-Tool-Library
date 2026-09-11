@@ -347,6 +347,11 @@ body
     display: none;
 }
 
+.footer-social-media-link-image
+{
+    width: 40px;
+}
+
 @media (max-width: 500px)
 {
     body
