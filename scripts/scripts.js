@@ -38,7 +38,7 @@ var PRODUCT_DETAIL_PAGE_HTML = `
         <div class="product-page-check-out-container">
             <div class="product-page-check-out-details-section">
                 <p class="product-page-check-out-details-section-title">Check Out</p>
-                <p>Interested in checking out? Contact us directly or simply fill out the form and we will reach out within 1 hour during our operating time.</p>
+                <p>Interested in checking out? Contact us directly or simply fill out the form and we will reach out within an hour during our operating time.</p>
                 <p>Email : rochester.tool.library@gmail.com</p>
                 <p>Phone : (832) 570-8833</p>
             </div>
@@ -48,7 +48,7 @@ var PRODUCT_DETAIL_PAGE_HTML = `
                 <p>* Required</p><br>
                 <label class="product-page-check-out-form-section-label">Full Name *</label><br>
                 <input id="customer_name" type="text" class="product-page-check-out-form-section-input"><br><br><br>
-                <label class="product-page-check-out-form-section-label">Membership ID (If Applicable)</label><br>
+                <label class="product-page-check-out-form-section-label">Membership ID *</label><br>
                 <input id="customer_membership_id" type="text" class="product-page-check-out-form-section-input"><br><br><br>
                 <label class="product-page-check-out-form-section-label">Email *</label><br>
                 <input id="customer_email" type="email" class="product-page-check-out-form-section-input"><br><br><br>
@@ -290,8 +290,8 @@ function checkRequiredFields()
     let customer_name = document.getElementById('customer_name').value;
     let customer_email = document.getElementById('customer_email').value;
     let customer_desired_checkout_date = document.getElementById('customer_desired_checkout_date').value;
-
-    if(customer_name && customer_email && customer_desired_checkout_date)
+    let customer_membership_id = document.getElementById('customer_membership_id').value;
+    if(customer_name && customer_email && customer_desired_checkout_date && customer_membership_id)
     {
         return true;
     }else
