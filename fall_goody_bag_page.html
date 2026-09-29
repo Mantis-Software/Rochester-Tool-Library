@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/main-styles.css">
     <link rel="stylesheet" href="./styles/utility-styles.css">
     <link rel="stylesheet" href="./styles/inventory-styles.css">
-    <link rel="stylesheet" href="./styles/product-styles.css">
+    <link rel="stylesheet" href="./styles/store-styles.css">
 
     <script src="scripts/products.js"></script>
     <script src="scripts/scripts.js"></script>
@@ -20,8 +20,7 @@
 </head>
 
 
-<body onload="populate_products()">
-    
+<body>
 
     <!--Menu-->
     <div>
@@ -42,38 +41,34 @@
         </div>
     </div>
 
-    <div id="overall-product-container">
-        <div class="inventory-filter-categories-container">
-            <p>Categories: </p>
+    <div class="overall-store-item-container">
+    <a href="./store.html" class="back-to-store-button">Back To Store</a>
+    <p class="store-item-title-text">Fall Goody Bag</p>
+    <div class="store-item-container">
+        <div class="store-left-side">
+            <img src="./images/store_photos/fall_goody_bag_2.webp" class="store_item_image">
+        </div>
+
+        <div class="store-right-side">
+            <p class="store-item-right-box-title-text">Description:</p>
+            <p class="store-item-description-text">Get a free Fall goody bag! This bag was made for kids ages 8 and up in mind. The goody bag contains two small craft projects and Robux for the popular game called Roblox. Have your kid do something fun and make something of their very own. Kids will have two projects to make which includes making their own pumpkin plushie and a bead corn bag charm. Paper instructions will be included with the kits along with QR codes to video instructions on our YouTube channel. Hurry now and claim your bags today! We will deliver them personally starting October 14th. Must reside in Rochester Minnesota.</p>
             <br>
-            <select name="inventory-filter-categories" id="inventory-filter-categories" class="inventory-filter-categories-selector" onchange="update_products()">
-                <option value="all">All</option>
-                <option value="tools">Tools</option>
-                <option value="technology">Technology</option>
-                <option value="arts_and_crafts">Arts & Crafts</option>
-                <option value="recreation">Recreation</option>
-            </select>
+            <p class="store-item-right-box-title-text">Quantity Available:</p>
+            <p class="store-item-quantity-text">Only 50 Left!</p>
+            <p>*Limit 2 per household</p>
+            <br>
+            <p class="store-item-right-box-title-text">Price</p>
+            <p class="store-item-quantity-text">Free</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a class="store-item-preorder-button" href="https://buy.stripe.com/8x2bJ28wxaeD0yQ4EVfUQ0l">Pre-Order</a>
         </div>
-
-        <div class="inventory-page-navigator-container">
-            <p class="inventory-page-navigator" onclick="previous_page()">Previous Page</p>
-            <p class="inventory-page-navigator" onclick="next_page()">Next Page</p>
-        </div>
-
-        <div class="overall-container">
-            <p class="section-title">Inventory</p>
-            <div class="inventory-grid-container" id="inventory-grid-container">
-            </div>
-        </div>
-
-        <div class="inventory-page-navigator-container">
-            <p class="inventory-page-navigator" onclick="previous_page()">Previous Page</p>
-            <p class="inventory-page-navigator" onclick="next_page()">Next Page</p>
-        </div>
-
-        <div class="spacer"></div>
-        <div class="spacer"></div>
     </div>
+    </div>
+
+    <div class="spacer"></div>
 
 
     <!--Footer-->
@@ -114,6 +109,9 @@
             </div>
         </div>
     </footer>
-
 </body>
+
+
+
+
 </html>

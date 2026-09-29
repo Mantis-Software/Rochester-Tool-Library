@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/main-styles.css">
     <link rel="stylesheet" href="./styles/utility-styles.css">
     <link rel="stylesheet" href="./styles/inventory-styles.css">
-    <link rel="stylesheet" href="./styles/product-styles.css">
+    <link rel="stylesheet" href="./styles/store-styles.css">
 
     <script src="scripts/products.js"></script>
     <script src="scripts/scripts.js"></script>
@@ -20,8 +20,7 @@
 </head>
 
 
-<body onload="populate_products()">
-    
+<body>
 
     <!--Menu-->
     <div>
@@ -42,39 +41,23 @@
         </div>
     </div>
 
-    <div id="overall-product-container">
-        <div class="inventory-filter-categories-container">
-            <p>Categories: </p>
-            <br>
-            <select name="inventory-filter-categories" id="inventory-filter-categories" class="inventory-filter-categories-selector" onchange="update_products()">
-                <option value="all">All</option>
-                <option value="tools">Tools</option>
-                <option value="technology">Technology</option>
-                <option value="arts_and_crafts">Arts & Crafts</option>
-                <option value="recreation">Recreation</option>
-            </select>
-        </div>
 
-        <div class="inventory-page-navigator-container">
-            <p class="inventory-page-navigator" onclick="previous_page()">Previous Page</p>
-            <p class="inventory-page-navigator" onclick="next_page()">Next Page</p>
-        </div>
 
-        <div class="overall-container">
-            <p class="section-title">Inventory</p>
-            <div class="inventory-grid-container" id="inventory-grid-container">
+    <div class="overall-store-container">
+        <p class="store-title">Store</p>
+        <div class="store-container">
+            <div class="store-item-box">
+                <img src="./images/store_photos/fall_goody_bag.webp" class="store_image">
+                <p class="item-name-title">Fall Goody Bag</p>
+                <p>Price: Free</p>
+                <p>Quantity: 50</p>
+                <a class="view-product-button" href="./fall_goody_bag_page.html">View Product</a>
             </div>
         </div>
-
-        <div class="inventory-page-navigator-container">
-            <p class="inventory-page-navigator" onclick="previous_page()">Previous Page</p>
-            <p class="inventory-page-navigator" onclick="next_page()">Next Page</p>
-        </div>
-
-        <div class="spacer"></div>
-        <div class="spacer"></div>
     </div>
 
+
+    <div class="spacer"></div>
 
     <!--Footer-->
     <footer>
@@ -114,6 +97,9 @@
             </div>
         </div>
     </footer>
-
 </body>
+
+
+
+
 </html>

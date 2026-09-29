@@ -1,0 +1,141 @@
+.overall-store-container
+{
+    padding: 30px;
+}
+
+.store-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.store-item-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    width: 300px;
+    height: 550px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    margin-top: 30px;
+}
+
+.store-title
+{
+    font-size: 30px;
+}
+
+.store_image
+{
+    width: 200px;
+}
+
+.item-name-title
+{
+    font-size: 20px;
+}
+
+.view-product-button
+{
+    background-color: #15586f;
+    color: white;
+    width: 180px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.store-item-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.store_item_image
+{
+    width: 400px;
+}
+
+.store-left-side
+{
+    padding: 30px;
+}
+
+.store-right-side
+{
+    padding: 30px;
+    width: 40%;
+}
+
+.store-item-right-box-title-text
+{
+    font-size: 25px;
+}
+
+.store-item-preorder-button
+{
+    background-color: #15586f;
+    color: white;
+    width: 180px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.store-item-quantity-text
+{
+    font-size: 20px;
+    color: red;
+    font-weight: 700;
+}
+
+.store-item-description-text
+{
+    font-size: 18px;
+}
+
+.overall-store-item-container
+{
+    padding: 30px;
+}
+
+.back-to-store-button
+{
+    font: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.store-item-title-text
+{
+    font-size: 30px;
+}
+
+@media (max-width: 500px)
+{
+
+    .store_item_image
+    {
+        width: 300px;
+    }
+    .store-right-side
+    {
+        padding: 30px;
+        width: 90%;
+    }
+}
