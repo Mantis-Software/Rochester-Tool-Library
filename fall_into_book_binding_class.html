@@ -7,8 +7,12 @@
 
     <link rel="stylesheet" href="./styles/main-styles.css">
     <link rel="stylesheet" href="./styles/utility-styles.css">
-    <link rel="stylesheet" href="./styles/membership-styles.css">
+    <link rel="stylesheet" href="./styles/inventory-styles.css">
+    <link rel="stylesheet" href="./styles/store-styles.css">
+    <link rel="stylesheet" href="./styles/class-styles.css">
 
+    <script src="scripts/products.js"></script>
+    <script src="scripts/scripts.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +22,6 @@
 
 
 <body>
-    
 
     <!--Menu-->
     <div>
@@ -39,64 +42,45 @@
         </div>
     </div>
 
-    <div class="overall-container">
-        <p class="section-title">Hundreds of Tools and Beyond!</p>
-        <div class="why-we-charge-container">
-            <p class="why-we-charge-text">Your membership will include various perks. Access hundreds of tools for less than the price of a drill. Your membership will also help us grow our tool, service, and class offerings. We want to bring as many tools as possible to the people of Rochester, Minnesota. </p>
+    <div class="overall-store-item-container">
+    <a href="./classes.html" class="back-to-store-button">Back To Classes</a>
+    <p class="store-item-title-text">Fall Into... Book Binding</p>
+    <div class="store-item-container">
+        <div class="store-left-side">
+            <img src="./images/class_photos/fall_into_book_binding.webp" class="store_item_image">
+        </div>
+
+        <div class="store-right-side">
+            <p class="store-item-right-box-title-text">Description</p>
+            <p class="store-item-description-text">Join us this October 10th and learn the beautiful craft of bookbinding. Make your own custom hardcover journal while enjoying a boba tea on a relaxing October evening. This class is for anyone interested in learning the art of bookbinding and does not require any previous experience. We will go over the basics, and you will walk away with a fully intact book that you can use and the knowledge to make it again. We are excited to see you all there! 😊</p>
+            <br>
+            <p class="store-item-right-box-title-text">Spots Available</p>
+            <p class="store-item-quantity-text">8 Spots Left</p>
+            <br>
+            <p class="store-item-right-box-title-text">Price</p>
+            <p class="class-price-text">$35 / person</p>
+            <br>
+            <p class="store-item-right-box-title-text">Location</p>
+            <p class="class-location-name">Uni Uni Bubble Tea</p>
+            <p>1232 First St SW, Rochester, MN  55902</p>
+            <p>* Back Parking Lot Entrance</p>
+            <br>
+            <p class="store-item-right-box-title-text">Refunds</p>
+            <p>You are eligible for a full refund if you email us at rochester.tool.library@gmail.com 48 hours before the event.</p>
+            <br>
+            <br>
+            <br>
+            <a class="store-item-preorder-button" href="https://book.stripe.com/4gMdRa7st5Yn2GY8VbfUQ0m">Register Now</a>
         </div>
     </div>
-
-    <div class="spacer"></div>
-
-    <div class="overall-container">
-        <p class="section-title">Memberships</p>
-        <div class="membership-container">
-            <div class="membership-item-box">
-                <p class="membership-item-box-membership-title-text">Standard Membership</p>
-                <p class="membership-item-box-membership-price-text">$10 /month</p>
-                <hr class="membership-item-box-membership-hr">
-                <p class="membership-item-box-membership-perks-text">Physical Tool Library Card</p>
-                <p class="membership-item-box-membership-perks-text">Access to Standard Tools</p>
-                <p class="membership-item-box-membership-perks-text">Access to Standard Services</p>
-                <p class="membership-item-box-membership-perks-text">Access to Free Giveaways</p>
-                <p class="membership-item-box-membership-perks-text">Check-out up to 10 items at the same time</p>
-                <p class="membership-item-box-membership-perks-text">Up to 2 day check-out period</p>
-                <br>
-                <br>
-                <a class="membership-item-box-membership-button" href="https://buy.stripe.com/3cIeVefYZ5YnbdugnDfUQ0j">Become a Member</a>
-            </div>
-
-            <div class="membership-item-box">
-                <p class="membership-item-box-membership-title-text">Premium Membership</p>
-                <p class="membership-item-box-membership-price-text">$15 /month</p>
-                <hr class="membership-item-box-membership-hr">
-                <p class="membership-item-box-membership-perks-text">Physical Tool Library Card</p>
-                <p class="membership-item-box-membership-perks-text">Access to Standard & Premium Tools</p>
-                <p class="membership-item-box-membership-perks-text">Access to Standard & Premium Services</p>
-                <p class="membership-item-box-membership-perks-text">Access to Free Giveaways</p>
-                <p class="membership-item-box-membership-perks-text">Check-out Unlimited Items</p>
-                <p class="membership-item-box-membership-perks-text">Up to 5 day check-out period</p>
-                <p class="membership-item-box-membership-perks-text">20% off classes</p>
-                <br>
-                <br>
-                <a class="membership-item-box-membership-button" href="https://buy.stripe.com/eVqcN6cMNfyXepG6N3fUQ0k">Become a Member</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div class="overall-container">
-        <p class="section-title">Cancel/Pause Membership</p>
-        <div class="why-we-charge-container">
-            <p class="why-we-charge-text">It is simple to cancel or pause! Provide your name and membership id to rochester.tool.library@gmail.com, we will verfiy you have no current check-outs, and done.</p>
-        </div>
     </div>
 
     <div class="spacer"></div>
     <div class="spacer"></div>
+    <div class="spacer"></div>
 
-        <!--Footer-->
+
+    <!--Footer-->
     <footer>
         <div class="footer-overall-container">
             <div class="footer-container">
@@ -141,6 +125,9 @@
             </div>
         </div>
     </footer>
-
 </body>
+
+
+
+
 </html>
