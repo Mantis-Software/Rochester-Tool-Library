@@ -14,6 +14,12 @@
     font-size: 20px;
 }
 
+.sold-out-text
+{
+    font-size: 35px;
+    color: red;
+}
+
 @media (max-width: 500px)
 {
 
