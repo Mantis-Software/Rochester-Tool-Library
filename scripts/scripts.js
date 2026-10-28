@@ -9,7 +9,7 @@ var PRODUCT_DETAIL_PAGE_HTML = `
             </div>
 
             <div class="product-page-details-section">
-                <p class="product-page-details-section-detail-title">Description:</p>
+                <p class="product-page-details-section-detail-title">Product Name:</p>
                 <p class="product-page-details-section-detail-text" id="product_name"></p>
                 <br>
                 <p class="product-page-details-section-detail-title">Description:</p>
